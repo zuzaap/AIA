@@ -1,0 +1,41 @@
+@media all and (min-width:600px) and (max-width:1023px){
+    .content{
+
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+        .item:first-child{
+            width: (100% - 2 * 1.5%);
+        }
+
+        .item{
+
+            width: (100% - 3 * 2%)/2;          
+        }
+
+    }
+
+
+    .header_section{
+
+        #menu{
+            display: none;
+        }
+
+        #button{
+            display: flex;
+        }
+
+    }   
+
+
+    .bottom{
+
+        position: relative;
+        bottom: 0px;
+        
+    }
+
+
+}
+

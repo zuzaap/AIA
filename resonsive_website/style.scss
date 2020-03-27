@@ -1,0 +1,174 @@
+$size: 16px;
+$paddingSize: 0px;
+$marginSize: $paddingSize;
+$padding15: 15px;
+$margin5: 5px;
+$border-attr: black solid 2px;
+$background-color: rgb(232, 235, 192);
+
+
+html{
+
+    height: 100%;
+
+}
+
+
+*{
+    font-size: $size;
+    font-weight: normal;
+    text-decoration: none;
+    color: black;
+    
+    padding: $paddingSize;
+    margin: $marginSize;
+
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+.header_section{
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between ;
+
+        #title{
+
+            display: flex;
+            flex-direction: row;
+
+        }
+
+        #logo{
+
+            height: 75px;
+            width: 75px;
+
+        }
+
+        #title_text{
+
+            font-size: $size*2;
+            font-weight: bolder;
+            padding-left: $padding15;
+            align-self: center; 
+
+        }
+
+        #menu{
+
+            display: flex;
+            flex-direction: row;
+            flex-grow: 0.25;
+            justify-content: space-between;
+            align-self: center;
+            padding-right: $padding15;
+
+        }
+        
+        #button{
+        
+            width: 60px;
+            height: 60px;
+            padding-right: $padding15;
+            padding-top: $padding15;
+            display: none;
+
+        }
+
+}
+
+
+.content{
+    
+    flex-direction: row;
+    justify-content: space-evenly;   
+    padding: $padding15;
+
+}
+
+
+.item{
+
+    font-family: Arial, Helvetica, sans-serif;
+    border: $border-attr;
+    background-color: $background-color;
+    margin: $margin5;
+
+}
+
+
+.text{
+
+
+    text-align: justify;
+    padding-top: $padding15;
+    padding: 3%;
+
+}
+
+
+%section_title{
+
+    text-align: center;
+    font-size: $size * 1.5;
+
+    border-bottom: $border-attr;
+    border-left: $border-attr;
+
+    align-self: flex-end;
+    width: 40%;
+    margin-bottom: $margin5;
+
+}
+
+    
+#lorem{
+
+    @extend %section_title;
+    background-color: powderblue;
+
+}
+
+
+#ipsum{
+
+    @extend %section_title;
+    background-color: lightsalmon;
+
+}
+
+
+#dolor{
+
+    @extend %section_title;
+    background-color: pink;
+
+}
+
+
+.bottom{
+
+    background-color: $background-color;
+    border-top: $border-attr;
+    text-align: center;
+    justify-content: center;
+
+    position: fixed; 
+    width: 100%;
+ 
+    bottom: 0; 
+    height:75px;
+
+        #name{
+            font-weight: bolder;
+        }
+
+}
+
+
+@import '_mobile.scss', '_tablet.scss';

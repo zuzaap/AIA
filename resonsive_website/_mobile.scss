@@ -1,0 +1,20 @@
+@media all and (max-width:599px){
+
+    .content{
+        flex-wrap: wrap;
+    }
+
+    .header_section{
+        #menu{
+            display: none;
+        }
+        #button{
+            display: flex;
+        }
+    }
+
+    .bottom{
+        position: relative;
+    }
+    
+}

@@ -1,0 +1,119 @@
+html {
+  height: 100%; }
+
+* {
+  font-size: 16px;
+  font-weight: normal;
+  text-decoration: none;
+  color: black;
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column; }
+
+.header_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between; }
+  .header_section #title {
+    display: flex;
+    flex-direction: row; }
+  .header_section #logo {
+    height: 75px;
+    width: 75px; }
+  .header_section #title_text {
+    font-size: 32px;
+    font-weight: bolder;
+    padding-left: 15px;
+    align-self: center; }
+  .header_section #menu {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0.25;
+    justify-content: space-between;
+    align-self: center;
+    padding-right: 15px; }
+  .header_section #button {
+    width: 60px;
+    height: 60px;
+    padding-right: 15px;
+    padding-top: 15px;
+    display: none; }
+
+.content {
+  flex-direction: row;
+  justify-content: space-evenly;
+  padding: 15px; }
+
+.item {
+  font-family: Arial, Helvetica, sans-serif;
+  border: black solid 2px;
+  background-color: #e8ebc0;
+  margin: 5px; }
+
+.text {
+  text-align: justify;
+  padding-top: 15px;
+  padding: 3%; }
+
+#lorem, #ipsum, #dolor {
+  text-align: center;
+  font-size: 24px;
+  border-bottom: black solid 2px;
+  border-left: black solid 2px;
+  align-self: flex-end;
+  width: 40%;
+  margin-bottom: 5px; }
+
+#lorem {
+  background-color: powderblue; }
+
+#ipsum {
+  background-color: lightsalmon; }
+
+#dolor {
+  background-color: pink; }
+
+.bottom {
+  background-color: #e8ebc0;
+  border-top: black solid 2px;
+  text-align: center;
+  justify-content: center;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  height: 75px; }
+  .bottom #name {
+    font-weight: bolder; }
+
+@media all and (max-width: 599px) {
+  .content {
+    flex-wrap: wrap; }
+
+  .header_section #menu {
+    display: none; }
+  .header_section #button {
+    display: flex; }
+
+  .bottom {
+    position: relative; } }
+@media all and (min-width: 600px) and (max-width: 1023px) {
+  .content {
+    flex-wrap: wrap;
+    justify-content: space-around; }
+    .content .item:first-child {
+      width: 97%; }
+    .content .item {
+      width: 47%; }
+
+  .header_section #menu {
+    display: none; }
+  .header_section #button {
+    display: flex; }
+
+  .bottom {
+    position: relative;
+    bottom: 0px; } }
+
+/*# sourceMappingURL=style.css.map */
