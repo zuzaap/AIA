@@ -127,7 +127,7 @@ html{
 }
 
     
-#lorem{
+#item_title1{
 
     @extend %section_title;
     background-color: powderblue;
@@ -135,7 +135,7 @@ html{
 }
 
 
-#ipsum{
+#item_title2{
 
     @extend %section_title;
     background-color: lightsalmon;
@@ -143,7 +143,7 @@ html{
 }
 
 
-#dolor{
+#item_title3{
 
     @extend %section_title;
     background-color: pink;

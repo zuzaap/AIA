@@ -57,7 +57,7 @@ html {
   padding-top: 15px;
   padding: 3%; }
 
-#lorem, #ipsum, #dolor {
+#item_title1, #item_title2, #item_title3 {
   text-align: center;
   font-size: 24px;
   border-bottom: black solid 2px;
@@ -66,13 +66,13 @@ html {
   width: 40%;
   margin-bottom: 5px; }
 
-#lorem {
+#item_title1 {
   background-color: powderblue; }
 
-#ipsum {
+#item_title2 {
   background-color: lightsalmon; }
 
-#dolor {
+#item_title3 {
   background-color: pink; }
 
 .bottom {
