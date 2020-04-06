@@ -1,0 +1,18 @@
+*{
+    font-size: 16px;
+    font-weight: normal;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: black;
+    background-color: lightgrey;
+}
+#title{
+    font-size: 25px;
+    font-weight: bolder;
+}
+td{
+    align-items: center;
+}
+#addButton{
+padding: 5px;
+}
