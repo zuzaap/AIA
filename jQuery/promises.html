@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+</head>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('button').click(function () {
+            get('guitars.json').then(function (response) {
+                $('div').append("Success!", response);
+            }, function (error) {
+                $('div').append("Failed!", error);
+            })
+        });
+    });
+
+    function get(url) {
+        return new Promise(function (resolve, reject) {
+            var req = new XMLHttpRequest();
+            req.open('GET', url);
+            req.onload = function () {
+                if (req.status === 200) {
+                    resolve(req.response);
+                } else {
+                    reject(Error(req.statusText));
+                }
+            }
+
+            req.onerror = function () {
+                reject(Error(' Network Error'));
+            }
+
+            req.send();
+        });
+    }
+
+</script>
+
+<body>
+    <button>LOAD</button>
+    <div></div>
+</body>
+
+</html>
