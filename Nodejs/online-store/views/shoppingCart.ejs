@@ -1,0 +1,58 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Online store</title>
+</head>
+
+
+<body>
+ <div class='header'>
+     <h1>Your basket</h1>
+ </div>
+ <div class="button">
+     <a class = "button" href = '/' type="button">Back to main page</a>
+ </div>
+
+ <div class = content>
+<% albums.forEach(function(album){%>
+    <tr>
+        <td>
+            <%= album.title %>
+        </td>
+        <td>
+            <%= album.artist %>
+        </td>
+        <td>
+            <%= album.year %>
+        </td>
+        <td>
+            <%= album.price %>
+        </td>
+        <td>
+            <form method="POST" action="/deleteFromBasket">
+                <input type="hidden" name="albumID" value=<%=album._id%>>
+                <input type="hidden" name="albumTitle" value=<%=album.title%>>
+                <input type="hidden" name="albumArtist" value=<%=album.artist %>>
+                <input type="hidden" name="albumYear" value=<%=album.year%>>
+                <input type="hidden" name="albumPrice" value=<%=album.price%>>
+                <button class="button">-</button>
+            </form>
+        </td>
+    </tr>
+<% }) %>
+   
+</div>
+
+<div class = 'buttons'>
+    <a class="button" href="/cancel" type="button" value="Cancel purchase">Cancel purchase</a>
+    <a class="button" href="/finalize" type="button" value="Finalize purchase">Finalize purchase </a>
+</div>
+    
+
+</body>
+</html>

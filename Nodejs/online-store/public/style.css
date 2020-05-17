@@ -1,0 +1,24 @@
+* {
+  color: #581e07;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-color: #8f8886; }
+
+.button {
+  background-color: #fedcd2c7;
+  display: inline-block;
+  margin: 2px;
+  text-align: center; }
+
+.content {
+  text-align: center; }
+
+.header {
+  font-weight: bold;
+  font-size: 40px;
+  text-align: center; }
+
+.buttons {
+  font-weight: bolder;
+  text-align: center; }
+
+/*# sourceMappingURL=style.css.map */

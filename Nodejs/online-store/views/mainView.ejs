@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Online store</title>
+</head>
+
+
+<body>
+    <div class = 'header'>
+        <h1>
+            Online Music Store
+        </h1>
+    </div>
+    <a class = "button" href="/shoppingCart" title = 'Go to basket'>Basket</a>
+    <div class="info">
+        <p><%= logs %></p>
+    </div>
+
+    <div class = content>
+            <% albums.forEach(function(album){%>
+                <tr>
+                    <td>
+                        <%= album.title %>
+                    </td>
+                    <td>
+                        <%= album.artist %>
+                    </td>
+                    <td>
+                        <%= album.year %>
+                    </td>
+                    <td>
+                        <%= album.price %>
+                    </td>
+                    <td>
+                        <form method="POST" action="/addToBasket">
+                        <input type="hidden" name="albumID" value=<%=album._id%>>
+                        <input type="hidden" name="albumTitle" value=<%=album.title%>>
+                        <input type="hidden" name="albumArtist" value=<%=album.artist%>>
+                        <input type="hidden" name="albumYear" value=<%=album.year%>>
+                        <input type="hidden" name="albumPrice" value=<%=album.price%>>
+                        <button class="button">+</button>
+                        <!-- <input class="button" type="button" value="+"/> -->
+                        </form>
+                    </td>
+                </tr>
+                <% }) %>       
+
+    </div>
+
+</body>
+</html>
